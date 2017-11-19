@@ -15,7 +15,7 @@ class PigLatinizer
       punctuation = word.scan(/[^a-z]/).first
 
       punctuation ? (word_end = "ay" + punctuation) : (word_end = "ay")
-      word.slice!(punctuation) unless punctuation == nil
+      word.slice!(punctuation) if punctuation
 
       if !first_letter.scan(/[aeiou]/).empty?
         word + word_end
