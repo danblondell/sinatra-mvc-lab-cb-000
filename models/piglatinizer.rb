@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text
   end
 
-  def piglatinize
+  def piglatinize(word)
     word.downcase!
     first_letter = word[0]
     second_letter = word[1]
