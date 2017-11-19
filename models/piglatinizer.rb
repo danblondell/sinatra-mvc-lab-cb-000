@@ -5,6 +5,8 @@ class PigLatinizer
     @text = text
   end
 
+  def 
+
   def make_piglatin_array
     @text.map do | word |
       first_letter = word[0]
