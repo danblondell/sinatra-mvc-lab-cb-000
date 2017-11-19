@@ -19,7 +19,7 @@ class PigLatinizer
       word.slice!(punctuation) if punctuation
 
       if !first_letter.scan(/[aeiou]/).empty?
-        word + word_end
+        word + "w" + word_end
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty? && word.size > 1
         word[2..-1] + first_letter + second_letter + word_end
       else
