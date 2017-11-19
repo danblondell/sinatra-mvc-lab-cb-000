@@ -6,6 +6,13 @@ class PigLatinizer
     third_letter = word[2]
 
     # searches for punctuation and adds it to the ending if it exists
+    if word.scan(/[^a-zA-Z]/).first
+      word.slice!(punctuation)
+      word_end = "ay" + punctuation
+    else
+      word_end = "ay"
+    end
+
     punctuation = word.scan(/[^a-zA-Z]/).first
     punctuation ? (word_end = "ay" + punctuation) : (word_end = "ay")
     word.slice!(punctuation) if punctuation
