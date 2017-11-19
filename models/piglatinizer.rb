@@ -28,7 +28,7 @@ class PigLatinizer
   end
 
   def piglatinize
-    make_piglatin_array.join(" ")
+    self.make_piglatin_array.join(" ")
   end
 
 
