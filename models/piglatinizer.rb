@@ -10,6 +10,7 @@ class PigLatinizer
     punctuation ? (word_end = "ay" + punctuation) : (word_end = "ay")
     word.slice!(punctuation) if punctuation
 
+    # applies rules of pig latin to word
     if !first_letter.scan(/[aeiouAEIOU]/).empty?
       word + "w" + word_end
     elsif word.size >= 3 && first_letter.scan(/[aeiouAEIOU]/).empty? && second_letter.scan(/[aeiou]/).empty? && third_letter.scan(/[aeiou]/).empty?
