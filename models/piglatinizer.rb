@@ -20,9 +20,9 @@ class PigLatinizer
       if !first_letter.scan(/[aeiou]/).empty?
         word + word_end
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty? && word.size > 1
-        word[2..-1] + first_letter + second_letter + word_end
+        word[2..word.length] + first_letter + second_letter + word_end
       else
-        word[1..-1] + first_letter + word_end
+        word[1..word.length] + first_letter + word_end
       end
 
     end
