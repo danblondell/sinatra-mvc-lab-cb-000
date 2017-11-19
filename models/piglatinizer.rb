@@ -7,7 +7,7 @@ class PigLatinizer
 
   def piglatinize
     @text.map do | word |
-      if word.first == /[aeiou]/
+      if word[0] == /[aeiou]/
         word + "ay"
       elsif word[0] == /[^aeiou]/ && word[1] == /[^aeiou]/
         word
