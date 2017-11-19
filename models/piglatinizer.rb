@@ -2,12 +2,14 @@ class PigLatinizer
   attr_accessor :text
 
   def initialize(text)
-    @text = text.split(" ")
+    @text = text
   end
 
   def
 
   def make_piglatin_array
+    @text = text.split(" ")
+    
     @text.map do | word |
       first_letter = word[0]
       second_letter = word[1]
