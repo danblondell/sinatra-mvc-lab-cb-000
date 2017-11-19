@@ -17,6 +17,8 @@ class PigLatinizer
         word.slice!(0..1)
 
         word + new_ending
+      else
+        word.slice!(0) + first_letter + "ay"
     end
   end
 
