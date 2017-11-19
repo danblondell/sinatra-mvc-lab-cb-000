@@ -9,10 +9,11 @@ class PigLatinizer
     text_array = @text.split(" ")
 
     text_array.map do | word |
-      first_letter = word[0].downcase
+      word.downcase!
+      first_letter = word[0]
       second_letter = word[1]
 
-      punctuation = word.scan(/[^a-zA-Z]/).first
+      punctuation = word.scan(/[^a-z]/).first
 
       punctuation ? (word_end = "ay" + punctuation) : (word_end = "ay")
       word.slice!(punctuation) if punctuation
