@@ -17,9 +17,9 @@ class PigLatinizer
       punctuation ? word_end = "ay" + punctuation : word_end = "ay"
 
       if !first_letter.scan(/[aeiou]/).empty?
-        word +  word_end
+        word + word_end
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty?
-        word[2..-1] + first_letter + second_letter + "ay" + punctuation
+        word[2..-1] + first_letter + second_letter + word_end
       else
         word[1..-1] + first_letter + "ay" + punctuation
       end
