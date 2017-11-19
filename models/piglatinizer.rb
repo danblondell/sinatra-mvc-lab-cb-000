@@ -12,9 +12,9 @@ class PigLatinizer
 
     if !first_letter.scan(/[aeiouAEIOU]/).empty?
       word + "w" + word_end
-    elsif word.size > 2 && first_letter.scan(/[aeiouAEIOU]/).empty? && second_letter.scan(/[aeiou]/).empty? && third_letter.scan(/[aeiou]/).empty?
+    elsif word.size >= 3 && first_letter.scan(/[aeiouAEIOU]/).empty? && second_letter.scan(/[aeiou]/).empty? && third_letter.scan(/[aeiou]/).empty?
       word[3..-1] + first_letter + second_letter + third_letter + word_end
-    elsif first_letter.scan(/[aeiouAEIOU]/).empty? && second_letter.scan(/[aeiou]/).empty? && word.size > 1
+    elsif word.size >= 2 && first_letter.scan(/[aeiouAEIOU]/).empty? && second_letter.scan(/[aeiou]/).empty?
       word[2..-1] + first_letter + second_letter + word_end
     else
       word[1..-1] + first_letter + word_end
