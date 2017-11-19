@@ -10,7 +10,7 @@ class PigLatinizer
       first_letter = word[0]
       second_letter = word[1]
 
-      if first_letter == /[aeiou]/
+      if first_letter.scan(/[aeiou]/) 
         word + "ay"
       elsif first_letter != /[aeiou]/ && second_letter != /[aeiou]/
         new_ending = first_letter + second_letter + "ay"
