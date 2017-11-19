@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def piglatinize(text)
-    @text.tap do | word |
+    @text.map do | word |
       first_letter = word[0]
       second_letter = word[1]
 
