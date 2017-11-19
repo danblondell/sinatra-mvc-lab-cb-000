@@ -3,7 +3,7 @@ class PigLatinizer
 
   def initialize(text)
     @text = text
-
+    binding.pry
   end
 
   def first_letter_type
