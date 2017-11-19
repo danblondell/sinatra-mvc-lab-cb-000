@@ -9,7 +9,7 @@ class PigLatinizer
     @text.map do | word |
       if word.first == /[aeiou]/
         word + "ay"
-      elsif condition
+      elsif word.first == /[]/
 
     end
   end
