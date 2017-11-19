@@ -13,7 +13,7 @@ class PigLatinizer
       second_letter = word[1]
       punctuation = word.scan(/[^a-z]/)
 
-      
+      punctuation = "" if punctuation.empty?
 
       word.split!(punctuation)
 
