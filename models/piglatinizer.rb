@@ -9,7 +9,8 @@ class PigLatinizer
     @text.map do | word |
       first_letter = word[0]
       second_letter = word[1]
-      if word[0] == /[aeiou]/
+
+      if first_letter == /[aeiou]/
         word + "ay"
       elsif word[0] != /[aeiou]/ && word[1] != /[aeiou]/
         first_letter = word[0]
