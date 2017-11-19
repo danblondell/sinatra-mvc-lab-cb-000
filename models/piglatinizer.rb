@@ -10,6 +10,7 @@ class PigLatinizer
 
     text_array.map do | word |
       word.downcase
+      
       first_letter = word[0]
       second_letter = word[1]
 
