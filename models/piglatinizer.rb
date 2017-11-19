@@ -9,7 +9,7 @@ class PigLatinizer
     text_array = @text.split(" ")
 
     text_array.map do | word |
-      first_letter = word[0]
+      first_letter = word[0].downcase
       second_letter = word[1]
 
       punctuation = word.scan(/[^a-z]/).first
@@ -22,7 +22,7 @@ class PigLatinizer
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty? && word.size > 1
         word[2..-1] + first_letter + second_letter + word_end
       else
-        word[1..word.length-1] + first_letter + word_end
+        word[1..-1] + first_letter + word_end
       end
 
     end
