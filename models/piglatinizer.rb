@@ -16,7 +16,7 @@ class PigLatinizer
       word.split!(punctuation)
 
       if !first_letter.scan(/[aeiou]/).empty?
-        word + "ay"
+        punctuation.empty? word + "ay"
 
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty?
         new_ending = first_letter + second_letter + "ay"
