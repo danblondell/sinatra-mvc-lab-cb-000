@@ -17,7 +17,7 @@ class PigLatinizer
 
         word[2..-1] + new_ending
       else
-        word.[1..-1] + first_letter + "ay"
+        word[1..-1] + first_letter + "ay"
       end
     end
   end
