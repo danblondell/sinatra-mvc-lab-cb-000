@@ -6,6 +6,8 @@ class PigLatinizer
   end
 
   def first_letter_type
+    
+
   end
 
   def piglatinize
