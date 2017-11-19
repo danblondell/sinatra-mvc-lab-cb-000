@@ -5,6 +5,18 @@ class PigLatinizer
     @text = text
   end
 
+  def piglatinize
+
+  end
+
+
+
+
+
+
+
+
+
   def make_piglatin_array
     text_array = @text.split(" ")
 
