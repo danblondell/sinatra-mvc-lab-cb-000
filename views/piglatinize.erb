@@ -6,11 +6,5 @@
   </head>
   <body>
     <%= @piglatinizer.to_pig_latin(@user_text) %>
-
-    <h1>Pig Latinizer</h1>
-    <form method="POST" action="/piglatinize">
-      User text: <input type="text" name="user_phrase">
-      <input type="submit" name="submit">
-    </form>
   </body>
 </html>
