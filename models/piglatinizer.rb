@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def piglatinize
-
+    @text.each do 
   end
 
 end
