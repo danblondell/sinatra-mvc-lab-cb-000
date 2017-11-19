@@ -17,6 +17,7 @@ class PigLatinizer
 
       if !first_letter.scan(/[aeiou]/).empty?
         word + "ay"
+
       elsif first_letter.scan(/[aeiou]/).empty? && second_letter.scan(/[aeiou]/).empty?
         new_ending = first_letter + second_letter + "ay"
 
