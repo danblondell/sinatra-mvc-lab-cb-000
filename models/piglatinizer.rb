@@ -7,7 +7,7 @@ class PigLatinizer
 
   def make_piglatin_array
     text_array = @text.split(" ")
-    
+
     text_array.map do | word |
       first_letter = word[0]
       second_letter = word[1]
@@ -15,7 +15,7 @@ class PigLatinizer
       punctuation = word.scan(/[^a-z]/).first
 
       punctuation ? word_end = "ay" + punctuation : word_end = "ay"
-      word.slice!(punctuation) if punctuation
+      word.slice!(punctuation) unless punctuation == nil
 
       if !first_letter.scan(/[aeiou]/).empty?
         word + word_end
