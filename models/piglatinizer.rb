@@ -6,9 +6,9 @@ class PigLatinizer
   end
 
   def make_piglatin_array
-    text_array = text.split!(" ")
+    text_array = text.split(" ")
 
-    @text.map do | word |
+    text_array.map do | word |
       first_letter = word[0]
       second_letter = word[1]
       punctuation = word.scan(/[^a-z]/)
