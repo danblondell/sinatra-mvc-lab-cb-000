@@ -14,7 +14,9 @@ class PigLatinizer
         word + "ay"
       elsif first_letter != /[aeiou]/ && second_letter != /[aeiou]/
         new_ending = first_letter + second_letter + "ay"
-        word.slice!(0..1) 
+        word.slice!(0..1)
+
+        word + new_ending
     end
   end
 
