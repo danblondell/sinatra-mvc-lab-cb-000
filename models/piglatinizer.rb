@@ -11,7 +11,7 @@ class PigLatinizer
     text_array.map do | word |
       first_letter = word[0]
       second_letter = word[1]
-      punctuation = word.scan(/[^a-z]/)
+      punctuation = word.scan(/[^a-z]/).first
 
       punctuation.empty? ? punctuation = "" : word.slice!(punctuation)
 
