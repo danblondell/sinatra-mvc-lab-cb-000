@@ -1,9 +1,9 @@
 class PigLatinizer
-  attr_accessor :text
-
-  def initialize(text)
-    @text = text
-  end
+  # attr_accessor :text
+  # 
+  # def initialize(text)
+  #   @text = text
+  # end
 
   def piglatinize(word)
     word.downcase!
@@ -24,7 +24,7 @@ class PigLatinizer
     end
   end
 
-  def to_pig_latin
+  def to_pig_latin(phrase)
     @text.split(" ").map {| word | piglatinize(word)}.join(" ")
   end
 
