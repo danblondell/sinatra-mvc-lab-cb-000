@@ -5,12 +5,13 @@ class PigLatinizer
     @text = text
   end
 
-  def 
+  def
 
   def make_piglatin_array
     @text.map do | word |
       first_letter = word[0]
       second_letter = word[1]
+      punctuation = word.scan(/[^a-z]/)
 
       if !first_letter.scan(/[aeiou]/).empty?
         word + "ay"
