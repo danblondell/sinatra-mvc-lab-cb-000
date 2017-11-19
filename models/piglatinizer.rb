@@ -6,7 +6,8 @@ class PigLatinizer
   end
 
   def piglatinize
-    @text.each do 
+    @text.map do | word |
+    end
   end
 
 end
