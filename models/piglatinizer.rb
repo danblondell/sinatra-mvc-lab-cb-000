@@ -1,7 +1,7 @@
 class PigLatinizer
 
   def piglatinize(word)
-    first_letter = word[0]
+    first_letter = word[0] # would downcase here but text reqires not downcasing
     second_letter = word[1]
     third_letter = word[2]
 
