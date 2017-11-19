@@ -6,7 +6,7 @@ class PigLatinizer
   end
 
   def make_piglatin_array
-    @text = text.split(" ")
+    @text.split!(" ")
 
     @text.map do | word |
       first_letter = word[0]
