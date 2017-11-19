@@ -5,7 +5,8 @@ class PigLatinizer
     @text = text
   end
 
-  def 
+  def first_letter
+  end
 
   def piglatinize
 
