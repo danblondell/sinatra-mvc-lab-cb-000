@@ -7,6 +7,10 @@ class PigLatinizer
 
   def piglatinize
     @text.map do | word |
+      if word.first == /[aeiou]/
+        word + "ay"
+      elsif condition
+
     end
   end
 
