@@ -1,11 +1,10 @@
 class PigLatinizer
 
   def piglatinize(word)
-    word.downcase!
     first_letter = word[0]
     second_letter = word[1]
 
-    punctuation = word.scan(/[^a-z]/).first
+    punctuation = word.scan(/[^a-zA-Z]/).first
 
     punctuation ? (word_end = "ay" + punctuation) : (word_end = "ay")
     word.slice!(punctuation) if punctuation
