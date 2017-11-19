@@ -2,7 +2,7 @@ class PigLatinizer
   attr_accessor :text
 
   def initialize(text)
-    @text = text.split(" ")
+    @text = text
   end
 
   def make_piglatin_array
